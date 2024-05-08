@@ -1,4 +1,4 @@
-print("hello world")
+print("hello \n\rworld")
 
 for i,v in enumerate([1,2,3,4,5]):
     print(v)

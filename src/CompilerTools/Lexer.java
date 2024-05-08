@@ -2,12 +2,17 @@ package CompilerTools;
 
 public class Lexer {
 
-    public Lexer() {
+    ProgramTree outputTree;
 
+    public Lexer() {
+        outputTree = new ProgramTree();
     }
 
-    public ProgramInstruction parseLine(String data) {
+    public void parseLine(String data) {
+        System.out.println(data);
+    }
 
-        return new ProgramInstruction();
+    public ProgramTree getProgramTree() {
+        return outputTree;
     }
 }

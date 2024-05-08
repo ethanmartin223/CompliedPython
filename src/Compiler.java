@@ -24,13 +24,13 @@ public class Compiler {
 
     // Returns a CompilerTools.ProgramTree object containing CompilerTools.ProgramInstruction's generated from the input reader
     public ProgramTree runLexer(BufferedReader reader) throws IOException {
-        ProgramTree outputTree = new ProgramTree();
         Lexer lex = new Lexer();
-
-        while (reader.readLine() != null) {
-            outputTree.addInstruction(lex.parseLine(reader.readLine()));
+        String currentLineData = reader.readLine();
+        while (currentLineData != null) {
+            lex.parseLine(currentLineData);
+            currentLineData = reader.readLine();
         }
-        return outputTree;
+        return lex.getProgramTree();
     }
 
     // Compiles the source file or string data provided in constructor

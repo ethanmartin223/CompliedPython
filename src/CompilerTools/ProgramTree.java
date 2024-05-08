@@ -5,13 +5,13 @@ import java.util.Queue;
 
 public class ProgramTree {
 
-    Queue<ProgramInstruction> instructions;
+    Queue<ProgramInstructionToken> instructions;
 
     public ProgramTree() {
         instructions = new LinkedList<>();
     }
 
-    public void addInstruction(ProgramInstruction programInstruction) {
-        instructions.add(programInstruction);
+    public void addInstruction(ProgramInstructionToken programInstructionToken) {
+        instructions.add(programInstructionToken);
     }
 }
