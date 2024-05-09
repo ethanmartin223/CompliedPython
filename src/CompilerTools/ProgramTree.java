@@ -14,4 +14,9 @@ public class ProgramTree {
     public void addInstruction(ProgramInstructionToken programInstructionToken) {
         instructions.add(programInstructionToken);
     }
+
+    public String toString() {
+        String output = ""
+        return output;
+    }
 }
